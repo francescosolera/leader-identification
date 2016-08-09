@@ -51,23 +51,4 @@ for i = 1 : length(groups)
     Y{i} = 1 : length(groups{i});
 end
 
-% features    = cell(length(groups), sum(model_par.features));
-% PR          = cell(length(groups), sum(model_par.features)*2);
-% Y           = cell(length(groups), 1);
-% for i = 1 : length(groups)
-%     feature_idx = 0;
-%     
-%     %fprintf('.');
-%     for j = 1 : length(model_par.features_callbacks)
-%         if model_par.features(j)
-%             feature_idx = feature_idx + 1;
-%             features{i, feature_idx} = model_par.features_callbacks{j}(members, trajectories, groups{i});
-%             PR{i, feature_idx} = pageRank(features{i, feature_idx});
-%             PR{i, feature_idx+sum(model_par.features)} = -pageRank(features{i, feature_idx});
-%         end
-%     end
-%     
-%     Y{i} = 1 : length(groups{i});
-% end
-
 end
